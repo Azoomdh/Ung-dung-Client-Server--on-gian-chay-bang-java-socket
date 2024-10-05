@@ -1,16 +1,14 @@
-## Ứng dụng Client-Server đơn giản chạy bằng java-socket
-
 
 # khởi tạo clientSocket1
 
-```
+```java
 // tạo 'socket của client' | 'socket kết nối với server'
 Socket clientSocket1 = new Socket(host:'127.0.0.1', port:9999 );
 ```
 
 # Khởi tạo serverSocket1
 
-```
+```java
 ServerSocket managerOfServerSocket1 = new ServerSocket(port:9999);
 
 // chấp nhận kết nối 
@@ -20,7 +18,7 @@ Socket serverSocket1 = managerOfServerSocket1.accept();
 
 # khởi tạo luồng nhập xuất của client
 
-```
+```java
 // khởi tạo biến đọc từ bàn phím
 	Scanner sc1 = new Scanner(System.in);
 
@@ -35,7 +33,7 @@ Socket serverSocket1 = managerOfServerSocket1.accept();
 
 # khởi tạo luồng nhập xuất của server
 
-```
+```java
 // khởi tạo biến đọc từ bàn phím
 	Scanner sc1 = new Scanner(System.in);
 
@@ -50,14 +48,14 @@ Socket serverSocket1 = managerOfServerSocket1.accept();
 
 # lưu ý
 
-```
+```java
 /* readLine() là phiên bản cũ hơn, 
 dùng readUTF để tiện lợi hơn */
 ```
 
 # mã giả của client
 
-```
+```java
 while(1==1){
 	// gửi tin nhắn
 		String str1 = sc1.nextLine();
@@ -71,7 +69,7 @@ while(1==1){
 ```
 
 # mã giả của server
-```
+```java
 while(1==1){
 	// đọc tin nhắn
 		String str1 = duLieuNhanTuClient1.readUTF();
